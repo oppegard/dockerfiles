@@ -1,0 +1,14 @@
+FROM hypriot/rpi-node:0.10.36
+
+ENV DEBIAN_FRONTEND noninteractive
+
+RUN apt-get update && \
+  apt-get install -y \
+    g++ \
+    git \
+    libavahi-compat-libdnssd-dev \
+    libasound2-dev \
+    make \
+    python
+
+RUN npm install airsonos -g
